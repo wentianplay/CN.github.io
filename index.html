@@ -1,17 +1,18 @@
 <!DOCTYPE html>
  <style>
-        body {
-            background-image: url('./WTP.png');
-            background-size: cover;
-            color: #2e7d32;
-            font-family: Arial, sans-serif;
-            text-align: center;
-            padding: 50px;
-            margin: 0;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
+body {
+  background-image: url('./WTP.png');
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh; /* 确保容器高度不低于视口 */
+}
+
+/* 横屏设备优化 */
+@media (orientation: landscape) {
+  body {
+    background-size: 100% auto; /* 横向优先覆盖 */
+  }
+}
     </style>
     <script>
         document.addEventListener("contextmenu", function(e) {
